@@ -16,9 +16,9 @@ CREATE TABLE IF NOT EXISTS users (
     user_name VARCHAR(16) NOT NULL
 );
 
-insert into users (username) values ("Sato");
-insert into users (username) values ("Suzuki");
-insert into users (username) values ("Takahashi");
+insert into users (user_name) values ("Sato");
+insert into users (user_name) values ("Suzuki");
+insert into users (user_name) values ("Takahashi");
 
 DROP TABLE IF EXISTS cards;
 CREATE TABLE IF NOT EXISTS cards (
@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS cards (
     attack INT NOT NULL,
     defense INT NOT NULL,
     cost INT NOT NULL
-)
+);
 
 insert into cards (card_rarity, card_name, attack, defense, cost) values ("common", "Tank", 10, 25, 3);
 insert into cards (card_rarity, card_name, attack, defense, cost) values ("uncommon", "Tank", 15, 40, 4);
@@ -41,7 +41,7 @@ insert into cards (card_rarity, card_name, attack, defense, cost) values ("uncom
 insert into cards (card_rarity, card_name, attack, defense, cost) values ("rare", "Thief", 20, 25, 2);
 
 
-DROP TABLE IF EXISTS user_cards
+DROP TABLE IF EXISTS user_cards;
 CREATE TABLE IF NOT EXISTS user_cards (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -49,24 +49,24 @@ CREATE TABLE IF NOT EXISTS user_cards (
     deck_id BOOLEAN NOT NULL
 );
 
-DROP TABLE IF EXISTS user_decks
+DROP TABLE IF EXISTS user_decks;
 CREATE TABLE IF NOT EXISTS user_decks (
     user_id INT NOT NULL,
     deck_id INT NOT NULL,
-    user_card_id INT NOT NULL,
+    user_card_id INT NOT NULL
 );
 
-DROP TABLE IF EXISTS card_gacha
+DROP TABLE IF EXISTS card_gacha;
 CREATE TABLE IF NOT EXISTS card_gacha (
     gacha_id INT NOT NULL,
     card_id INT NOT NULL,
-    weight_num INT NOT NULL,
+    weight_num INT NOT NULL
 );
 
-DROP TABLE IF EXISTS gacha_history
+DROP TABLE IF EXISTS gacha_history;
 CREATE TABLE IF NOT EXISTS gacha_history (
     id INT AUTO_INCREMENT PRIMARY KEY,
     history_id INT NOT NULL,
     gacha_id INT NOT NULL,
-    card_id INT NOT NULL,
+    card_id INT NOT NULL
 );

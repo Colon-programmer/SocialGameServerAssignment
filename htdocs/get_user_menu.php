@@ -23,12 +23,12 @@ if ($mysql->connect_error) {
 }
 
 $id = 0;
-if (isset($_GET['id']))
+if (isset($_GET['user_id']))
 {
-    $id = $_GET['id'];
+    $id = $_GET['user_id'];
 }
 
-$sql = "SELECT * FROM users where id = $id";
+$sql = "SELECT * FROM users where user_id = $id";
 // クエリの実行
 $result = $mysql->query($sql);
 
@@ -37,9 +37,9 @@ if ($result) {
     if ($result->num_rows > 0) {
         foreach($result as $row){
         // 取得したユーザーのメニューを表示する
-        echo $row["name"] . "さんのメニュー<br>";
-        echo "<td><a href=\"get_user_cards.php?user_id=" . $row["id"] . "\">" . "所持カード一覧" . "</a></td><br>";
-        echo "<td><a href=\"card_gacha.php?id=" . $row["id"] . "\">" . "ガチャ画面に移行する" . "</a></td><br>";
+        echo $row["user_name"] . "さんのメニュー<br>";
+        echo "<td><a href=\"get_user_cards.php?user_id=" . $row["user_id"] . "\">" . "所持カード一覧" . "</a></td><br>";
+        echo "<td><a href=\"card_gacha.php?id=" . $row["user_id"] . "\">" . "ガチャ画面に移行する" . "</a></td><br>";
         }
     echo "<br>";
     echo "<td><a href=\"get_users.php" . "\">" . "ユーザーを選びなおす" . "</a></td>";

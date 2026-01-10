@@ -23,7 +23,7 @@
                 foreach ($data as $row) {
                     echo "<tr>";
                     foreach ($row as $k => $v) {
-                        if ($k == "id") {
+                        if ($k == "user_id") {
                             echo "<td><a href=\"http://localhost/get_user_menu.php?id=" . htmlspecialchars($v) . "\">" . htmlspecialchars($v) . "</a></td>";
                         } else {
                             echo "<td>" . htmlspecialchars($v) . "さんのデータ" ."</td>";
