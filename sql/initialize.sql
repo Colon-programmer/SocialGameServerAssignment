@@ -1,9 +1,9 @@
-CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY 'data';
+CREATE USER IF NOT EXISTS 'root'@'localhost' IDENTIFIED BY 'p@ssword';
 GRANT ALL PRIVILEGES ON * . * TO 'root'@'localhost';
 
-CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'data';
+CREATE USER IF NOT EXISTS 'root'@'%' IDENTIFIED BY 'p@ssword';
 GRANT ALL PRIVILEGES ON * . * TO 'root'@'%';
-alter user 'root'@'%' identified with mysql_native_password by 'data';
+alter user 'root'@'%' identified with mysql_native_password by 'p@ssword';
 
 DROP DATABASE IF EXISTS social_game;
 CREATE DATABASE IF NOT EXISTS social_game;

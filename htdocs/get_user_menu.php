@@ -39,7 +39,7 @@ if ($result) {
         // 取得したユーザーのメニューを表示する
         echo $row["user_name"] . "さんのメニュー<br>";
         echo "<td><a href=\"get_user_cards.php?user_id=" . $row["user_id"] . "\">" . "所持カード一覧" . "</a></td><br>";
-        echo "<td><a href=\"card_gacha.php?id=" . $row["user_id"] . "\">" . "ガチャ画面に移行する" . "</a></td><br>";
+        echo "<td><a href=\"card_gacha.php?user_id=" . $row["user_id"] . "\">" . "ガチャ画面に移行する" . "</a></td><br>";
         }
     echo "<br>";
     echo "<td><a href=\"get_users.php" . "\">" . "ユーザーを選びなおす" . "</a></td>";

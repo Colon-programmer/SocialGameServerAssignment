@@ -20,6 +20,7 @@ try {
     session_start();
     $_SESSION['data'] = $results;
 
+    // http://localhost/get_users.phpでアクセスする
     // リダイレクト
     header("Location: display_users.php");
     exit();
