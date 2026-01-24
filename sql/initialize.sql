@@ -63,6 +63,16 @@ CREATE TABLE IF NOT EXISTS card_gacha (
     weight_num INT NOT NULL
 );
 
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 1, 100);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 2, 50);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 3, 10);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 4, 100);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 5, 50);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 6, 10);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 7, 100);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 8, 50);
+insert into card_gacha (gacha_id, card_id, weight_num) values (1, 9, 10);
+
 DROP TABLE IF EXISTS gacha_history;
 CREATE TABLE IF NOT EXISTS gacha_history (
     id INT AUTO_INCREMENT PRIMARY KEY,
